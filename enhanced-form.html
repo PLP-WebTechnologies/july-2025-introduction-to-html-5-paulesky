@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Registration Form</title>
+</head>
+<body>
+    <header>
+        <h1>Enhanced Registration Form</h1>
+        <p>Complete the form below with your information</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Registration Information</h2>
+            <form id="registrationForm" autocomplete="on">
+                <!-- Personal Information Fieldset -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <p>
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" 
+                               placeholder="Enter your full name" 
+                               required 
+                               autocomplete="name">
+                    </p>
+                    
+                    <p>
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" 
+                               placeholder="your.email@example.com" 
+                               required 
+                               autocomplete="email">
+                    </p>
+                    
+                    <p>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" 
+                               placeholder="555-123-4567" 
+                               autocomplete="tel">
+                    </p>
+                    
+                    <p>
+                        <label for="birthdate">Date of Birth *</label>
+                        <input type="date" id="birthdate" name="birthdate" 
+                               required 
+                               autocomplete="bday">
+                    </p>
+                </fieldset>
+
+                <!-- Account Information Fieldset -->
+                <fieldset>
+                    <legend>Account Information</legend>
+                    
+                    <p>
+                        <label for="username">Username *</label>
+                        <input type="text" id="username" name="username" 
+                               placeholder="Choose a username (min. 4 characters)" 
+                               required 
+                               minlength="4" 
+                               autocomplete="username">
+                    </p>
+                    
+                    <p>
+                        <label for="password">Password *</label>
+                        <input type="password" id="password" name="password" 
+                               placeholder="Create a strong password" 
+                               required 
+                               minlength="8" 
+                               autocomplete="new-password">
+                    </p>
+                    
+                    <p>
+                        <label for="website">Website URL</label>
+                        <input type="url" id="website" name="website" 
+                               placeholder="https://example.com" 
+                               autocomplete="url">
+                    </p>
+                </fieldset>
+
+                <!-- Additional Information Fieldset -->
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    
+                    <p>
+                        <label for="country">Country</label>
+                        <select id="country" name="country" autocomplete="country">
+                            <option value="">Select a country</option>
+                            <option value="us">United States</option>
+                            <option value="ca">Canada</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="au">Australia</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </p>
+                    
+                    <p>
+                        <label for="bio">Biography</label>
+                        <textarea id="bio" name="bio" 
+                                  placeholder="Tell us about yourself..." 
+                                  rows="4"></textarea>
+                    </p>
+                    
+                    <p>
+                        <label for="favColor">Favorite Color</label>
+                        <input type="color" id="favColor" name="favColor" value="#3498db">
+                    </p>
+                    
+                    <p>
+                        <label for="userRating">Rate your experience (1-10):</label>
+                        <input type="range" id="userRating" name="userRating" 
+                               min="1" max="10" value="5">
+                        <output for="userRating" id="ratingValue">5</output>
+                    </p>
+                </fieldset>
+
+                <!-- Preferences Fieldset -->
+                <fieldset>
+                    <legend>Preferences</legend>
+                    
+                    <h3>Communication Methods</h3>
+                    <p>
+                        <input type="checkbox" id="emailUpdates" name="emailUpdates" checked>
+                        <label for="emailUpdates">Email updates</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" id="smsUpdates" name="smsUpdates">
+                        <label for="smsUpdates">SMS notifications</label>
+                    </p>
+                    
+                    <h3>Preferred Contact Time</h3>
+                    <p>
+                        <input type="radio" id="morning" name="contactTime" value="morning" checked>
+                        <label for="morning">Morning</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="afternoon" name="contactTime" value="afternoon">
+                        <label for="afternoon">Afternoon</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="evening" name="contactTime" value="evening">
+                        <label for="evening">Evening</label>
+                    </p>
+                </fieldset>
+
+                <!-- Readonly Field Example -->
+                <fieldset>
+                    <legend>System Information</legend>
+                    <p>
+                        <label for="registrationDate">Registration Date</label>
+                        <input type="text" id="registrationDate" name="registrationDate" 
+                               value="2024-01-15" 
+                               readonly>
+                    </p>
+                </fieldset>
+
+                <!-- Form Actions -->
+                <p>
+                    <button type="submit">Submit Registration</button>
+                    <button type="reset">Reset Form</button>
+                </p>
+            </form>
+        </section>
+
+        <!-- Additional Content Section -->
+        <section>
+            <h2>Additional Information</h2>
+            
+            <h3>Registration Steps</h3>
+            <ol>
+                <li>Complete all required fields (marked with *)</li>
+                <li>Choose a secure password with at least 8 characters</li>
+                <li>Verify your email address</li>
+                <li>Review and submit your information</li>
+            </ol>
+
+            <h3>Available Membership Types</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Features</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Basic</td>
+                        <td>Standard access</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td>Premium</td>
+                        <td>Enhanced features + support</td>
+                        <td>$9.99/month</td>
+                    </tr>
+                    <tr>
+                        <td>Pro</td>
+                        <td>All features + priority support</td>
+                        <td>$19.99/month</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Media Examples</h3>
+            <p>Audio Example:</p>
+            <audio controls>
+                <source src="#" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <p>Video Example:</p>
+            <video controls width="400">
+                <source src="#" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+
+            <h3>Benefits of Registration</h3>
+            <ul>
+                <li>Access to exclusive content</li>
+                <li>Personalized user experience</li>
+                <li>Priority customer support</li>
+                <li>Regular updates and newsletters</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Enhanced Registration Form. All rights reserved.</p>
+    </footer>
+</body>
+</html>
